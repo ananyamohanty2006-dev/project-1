@@ -1,6 +1,4 @@
 FILE_NAME = "contacts.txt"
-
-# Add Contact
 def add_contact():
     name = input("Enter Name: ")
     phone = input("Enter Phone Number: ")
@@ -11,7 +9,6 @@ def add_contact():
 
     print("✅ Contact added successfully!")
 
-# View Contacts
 def view_contacts():
     try:
         with open(FILE_NAME, "r") as file:
@@ -29,7 +26,6 @@ def view_contacts():
     except FileNotFoundError:
         print("No contacts file found.")
 
-# Search Contact
 def search_contact():
     search_name = input("Enter name to search: ")
     found = False
@@ -48,7 +44,6 @@ def search_contact():
     except FileNotFoundError:
         print("No contacts file found.")
 
-# Delete Contact
 def delete_contact():
     delete_name = input("Enter name to delete: ")
     found = False
@@ -73,7 +68,6 @@ def delete_contact():
     except FileNotFoundError:
         print("No contacts file found.")
 
-# Main Menu
 def main():
     while True:
         print("\n--- Smart Contact Book ---")
@@ -99,5 +93,5 @@ def main():
         else:
             print("❌ Invalid choice!")
 
-# Run Program
 main()
+
